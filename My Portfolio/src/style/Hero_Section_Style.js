@@ -1,8 +1,7 @@
 import { Box, styled, Button } from '@mui/material'
-
-
+import Bgpic from "../assets/HeroSection.jpg"
 export const HeroSection = styled(Box)({
-    backgroundImage: "url(src/assets/HeroSection.jpg)",
+    backgroundImage: `url(${Bgpic})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center center",

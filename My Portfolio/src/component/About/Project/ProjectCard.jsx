@@ -54,7 +54,7 @@ export default function ProjectCard({ Projectname, Image, VideoLink, DeploymentL
                         <CardMedia
                             component="img"
 
-                            image={`/src/assets/${Image}.png`}
+                            image={`${Image}`}
                             alt="green iguana"
                         />
                         <CardContent className='project-content' sx={{ padding: "0px", marginTop: "1rem" }}>
@@ -100,7 +100,7 @@ export default function ProjectCard({ Projectname, Image, VideoLink, DeploymentL
                     <CloseIcon />
                 </IconButton>
                 <DialogContent dividers>
-                    <video src={`/src/assets/Project_Videos/${VideoLink}`} width="100%" height="100%" controls="controls" autoPlay="true" />
+                    <video src={`${VideoLink}`} width="100%" height="100%" controls="controls" autoPlay="true" />
                 </DialogContent>
 
             </Dialogbox>

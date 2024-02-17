@@ -2,6 +2,7 @@ import { Box, Grid, Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ContactmeForm from './ContactmeForm';
+import contactus from "../../assets/contact-us-new.png"
 const Contactme = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -25,7 +26,7 @@ const Contactme = () => {
                         <Grid item xs={12} sm={9} md={5} lg={5} order={{ xs: 1, md: 1 }} >
                             <Box width={"90%"}>
 
-                                <img src='/src/assets/contact-us-new.png' width={"100%"} />
+                                <img src={contactus} width={"100%"} />
                             </Box>
 
                         </Grid>

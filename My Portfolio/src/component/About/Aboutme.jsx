@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import aboutmePng from "../../assets/aboutus.png"
 const Aboutme = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -30,7 +31,8 @@ const Aboutme = () => {
 
                         <Grid item xs={12} sm={9} md={5} lg={5} order={{ xs: 1, md: 2 }} >
                             <Box>
-                                <img src='/src/assets/aboutus.png' width={"100%"} />
+
+                                <img src={aboutmePng} width={"100%"} />
                                 {/* <img src='/src/assets/office-desk.png' width={"100%"} /> */}
                                 {/* <img src='/src/assets/aboutus_animation.gif' width={"100%"} /> */}
                             </Box>
