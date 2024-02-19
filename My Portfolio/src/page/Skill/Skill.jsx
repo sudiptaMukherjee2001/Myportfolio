@@ -20,10 +20,10 @@ const Skill = () => {
                 <Aboutme />
                 {/* Skills */}
                 <Skills />
-                {/* Project Section */}
-                <ProjectSection />
                 {/* Experience  Section */}
                 <Experience />
+                {/* Project Section */}
+                <ProjectSection />
             </motion.div>
         </>
     )

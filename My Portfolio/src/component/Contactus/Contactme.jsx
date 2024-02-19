@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ContactmeForm from './ContactmeForm';
 import contactus from "../../assets/contact-us-new.png"
+import Baraimation from '../Baranimation/Baraimation';
 const Contactme = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -12,11 +13,17 @@ const Contactme = () => {
                 <Typography variant="h1"
                     textAlign={"center"}
                     fontWeight={500}
-                    fontSize={"3rem"}
+                    fontSize={"2.4rem"}
                     color={"rgba(0, 0, 0, 0.7)"}
-                    style={{ textShadow: "rgb(90 90 90) 1px 1px 8px" }}>
+                    style={{ textShadow: "rgb(90 90 90) 0.9px 0.9px 3px" }}>
                     Get in Touch
                 </Typography>
+            </Grid>
+
+            <Grid item xs={12} >
+                <Grid container justifyContent={"center"}>
+                    <Baraimation />
+                </Grid>
             </Grid>
             <Grid container justifyContent={"center"} padding={`${isMobile ? "1rem" : "0rem"}`}>
                 <Grid item xs={12} md={11} lg={11} >

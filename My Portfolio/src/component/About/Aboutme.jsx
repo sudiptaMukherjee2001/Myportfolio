@@ -2,13 +2,21 @@ import { Box, Grid, Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import aboutmePng from "../../assets/aboutus.png"
+import Baraimation from '../Baranimation/Baraimation';
 const Aboutme = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Grid container maxWidth={"1500px"} margin={`${isMobile ? "4rem auto 0px auto" : "4.5rem auto 0px auto"}`}>
             <Grid item xs={12} md={12}>
-                <Typography variant="h1" textAlign={"center"} fontWeight={500} fontSize={"3rem"} color={"rgba(0, 0, 0, 0.7)"} style={{ textShadow: "rgb(90 90 90) 1px 1px 8px" }}> About me</Typography>
+                <Typography variant="h1" textAlign={"center"} fontWeight={500} fontSize={"2.4rem"}
+                    color={"rgba(0, 0, 0, 0.7)"}
+                    style={{ textShadow: "rgb(90 90 90) 0.9px 0.9px 3px" }}> About me</Typography>
+            </Grid>
+            <Grid item xs={12} >
+                <Grid container justifyContent={"center"}>
+                    <Baraimation />
+                </Grid>
             </Grid>
             <Grid container justifyContent={"center"} padding={`${isMobile ? "1rem" : "0rem"}`}>
                 <Grid item xs={12} md={11} lg={11} >

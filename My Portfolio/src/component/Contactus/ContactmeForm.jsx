@@ -3,6 +3,8 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Projectbtn } from '../../style/Project_Section_style';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const validationSchema = yup.object({
     email: yup
         .string('Enter your email')
@@ -21,6 +23,19 @@ const ContactmeForm = () => {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
+            toast.success('Email sent successfully!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "dark",
+                transition: Slide
+
+
+            });
+
             console.log('====================================');
             console.log("Values", values);
             console.log('====================================');
@@ -74,6 +89,21 @@ const ContactmeForm = () => {
                 }}
             />
 
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Slide}
+
+
+            />
             <Projectbtn color="primary" variant="outlined" fullWidth type="submit" style={{ paddingBlock: "0.7rem" }}>Submit</Projectbtn>
         </form>
 
