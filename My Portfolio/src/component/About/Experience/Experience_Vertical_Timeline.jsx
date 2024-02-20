@@ -2,7 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import PropTypes from 'prop-types';
 
-const Experience_Vertical_Timeline = ({ Title, SubTitle, StartDate, EndDate, Desc }) => {
+const Experience_Vertical_Timeline = ({ Title, SubTitle, StartDate, EndDate, Desc, icon }) => {
     return (
         <>
             <VerticalTimeline layout={"1-column-left"} lineColor='#0F172A' >
@@ -12,7 +12,7 @@ const Experience_Vertical_Timeline = ({ Title, SubTitle, StartDate, EndDate, Des
                     contentArrowStyle={{ borderRight: '7px solid  #0F172A' }}
                     date={`${StartDate} - ${EndDate}`}
                     iconStyle={{ background: '#0F172A', color: '#fff' }}
-                //   icon={<WorkIcon />}
+                    icon={icon}
                 // style={{ border: "2px solid red", display: "flex", flexDirection: "column", alignItems: "center" }}
                 >
                     <h3 className="vertical-timeline-element-title">{Title}</h3>
@@ -33,6 +33,7 @@ Experience_Vertical_Timeline.propTypes = {
     StartDate: PropTypes.string.isRequired,
     EndDate: PropTypes.string.isRequired,
     Desc: PropTypes.string.isRequired,
+    icon: PropTypes.element.isRequired
 
 };
 

@@ -55,7 +55,13 @@ export const HeroSectionBtn = styled(Button)({
     background: "transparent",
     border: "1px solid white",
     color: "white",
+    fontSize: "18px",
     ":hover": {
+        transform: "scale(1.05)",
+        transition: ".2s ease-in-out",
+        boxShadow: `2px 0px 8px rgba(255,255,255,.9)`,
+
+        border: "1px solid white",
         background: "#fff",
         color: "#000"
 

@@ -29,6 +29,7 @@ const Experience = () => {
                                     StartDate={data.StartDate}
                                     EndDate={data.EndDate}
                                     Desc={data.Desc}
+                                    icon={data.icon}
                                 />
                             )
                         })

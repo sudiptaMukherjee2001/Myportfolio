@@ -4,8 +4,15 @@ import Typed from 'typed.js';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import Sudipta_resume2024 from "../../assets/Sudipta_resume2024.pdf"
+import { CustomLink } from '../../style/Link_style';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 const Hero = () => {
     const theme = useTheme();
+
+    const navigate = useNavigate();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const typedTextRef = useRef(null);
     const nameRef = useRef(null);
@@ -47,10 +54,13 @@ const Hero = () => {
         };
     }, []);
 
+    // Func is used to go to contact form
+    const goToContactForm = () => {
+        navigate("/contact");
 
+    }
 
     return (
-
         <HeroSection className='Hero_section'>
             <Grid container spacing={0} height={"100%"}>
                 <Grid item xs={12} md={12} lg={12} >
@@ -77,8 +87,15 @@ const Hero = () => {
                         {/* Middel part  of the content ends here*/}
                         {/*  Last part   of the content starts here*/}
                         <ContactMeBtnBox>
-                            <HeroSectionBtn variant='outlined' size="large">HIRE ME</HeroSectionBtn>
-                            <HeroSectionBtn variant='outlined' size="large">Download Cv</HeroSectionBtn>
+                            <HeroSectionBtn variant='outlined' size="large" onClick={goToContactForm} endIcon={<ArrowRightAltIcon fontSize='40px' />}>
+                                HIRE ME
+                            </HeroSectionBtn>
+                            <CustomLink to={Sudipta_resume2024} target="_blank">
+                                <HeroSectionBtn variant='outlined' size="large" endIcon={<FileDownloadIcon />}>
+                                    DOWNLOAD CV
+                                </HeroSectionBtn>
+                            </CustomLink>
+
                         </ContactMeBtnBox>
                         {/*   Last part   of the content ends here*/}
                     </WholeContent>
