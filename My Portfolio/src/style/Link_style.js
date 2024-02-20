@@ -5,6 +5,7 @@ export const CustomLink = styled(Link)({
     textDecoration: "none",
     border: "none",
     color: "white",
+
     ":hover": {
 
         border: "1px solid white",

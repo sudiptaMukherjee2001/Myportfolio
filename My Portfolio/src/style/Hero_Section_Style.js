@@ -11,7 +11,7 @@ export const HeroSection = styled(Box)({
     overflow: "hidden",
     color: "white",
     position: "relative",
-    maxWidth: "1990px",
+    // maxWidth: "1990px",
     margin: "4rem auto 0px auto",
     "::before": {
         content: "''",
@@ -25,14 +25,7 @@ export const HeroSection = styled(Box)({
         // height: "100%"
     }
 });
-export const WholeContent = styled(Box)({
 
-    display: 'flex',
-    flexDirection: "column",
-    justifyContent: "center",
-    height: "100%",
-
-});
 export const FlexBox = styled(Box)({
     display: 'flex',
     flexDirection: "column",
@@ -46,8 +39,9 @@ export const ContactMeBtnBox = styled(Box)({
     display: 'flex',
     justifyContent: "center",
     alignItems: "center",
-    columnGap: "30px",
-    marginTop: "3rem"
+    columnGap: "17px",
+    marginTop: "1rem",
+
 
 });
 export const HeroSectionBtn = styled(Button)({
@@ -56,6 +50,8 @@ export const HeroSectionBtn = styled(Button)({
     border: "1px solid white",
     color: "white",
     fontSize: "18px",
+    boxShadow: `2px 0px 8px rgb(255 255 255 / 54%)`,
+    textTransform: "capitalize ",
     ":hover": {
         transform: "scale(1.05)",
         transition: ".2s ease-in-out",
@@ -65,6 +61,52 @@ export const HeroSectionBtn = styled(Button)({
         background: "#fff",
         color: "#000"
 
+    }
+
+});
+export const SocialMediaIconContainer = styled(Box)({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 3,
+    marginTop: "2.3rem",
+    columnGap: "20px",
+    ".SocialMediaIconItem": {
+        background: "transparent",
+        color: "white",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
+        height: "40px",
+        width: "40px",
+        padding: "1.3rem",
+        borderRadius: "50%",
+        boxShadow: `2px 0px 8px rgb(255 255 255 / 54%)`,
+
+        animation: "AnimatedSocialMediaLinks 3s alternate infinite",
+        "@keyframes AnimatedSocialMediaLinks": {
+            "0%": {
+                transform: "translateY(0)"
+            },
+
+            "100%": {
+                transform: "translateY(-10px)"
+            }
+        },
+        ":hover": {
+            transform: "scale(1.05)",
+            transition: ".2s ease-in-out",
+            boxShadow: `2px 0px 8px rgb(255 255 255 / 54%)`,
+            height: "40px",
+            width: "40px",
+            padding: "1.3rem",
+            borderRadius: "50%",
+            // border: "1px solid white",
+            background: "#ffffff96",
+            color: "#000"
+
+        }
     }
 
 });
