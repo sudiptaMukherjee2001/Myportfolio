@@ -8,11 +8,12 @@ const Experience_Vertical_Timeline = ({ Title, SubTitle, StartDate, EndDate, Des
             <VerticalTimeline layout={"1-column-left"} lineColor='#0F172A' >
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#0F172A', color: '#fff' }}
+                    contentStyle={{ background: '#0F172A', color: '#fff', boxShadow: `2px 0px 8px rgb(255 255 255 / 54%)`, }}
                     contentArrowStyle={{ borderRight: '7px solid  #0F172A' }}
                     date={`${StartDate} - ${EndDate}`}
                     iconStyle={{ background: '#0F172A', color: '#fff' }}
                     icon={icon}
+
                 // style={{ border: "2px solid red", display: "flex", flexDirection: "column", alignItems: "center" }}
                 >
                     <h3 className="vertical-timeline-element-title">{Title}</h3>

@@ -11,7 +11,7 @@ export const Dialogbox = styled(Dialog)({
 
 });
 export const Projectcard = styled(Card)({
-    boxShadow: "rgba(0, 0, 0, 0.15) 0px 2px 8px",
+    boxShadow: `2px 0px 8px rgb(75 90 109 / 90%)`,
     backgroundColor: "#f3f3f359",
     // backgroundColor: "black",
     borderRadius: "0.3rem",
@@ -26,13 +26,15 @@ export const Projectcard = styled(Card)({
 export const Projectbtn = styled(Button)({
 
     background: "#0F172A",
-    border: "1px solid white",
+    // border: "1px solid white",
     color: "white",
     borderRadius: "0.3rem",
+
     ":hover": {
         background: "#fff",
         color: "#000",
         border: "1px solid #0F172A",
+        boxShadow: `2px 0px 8px rgba(255,255,255,.9)`,
 
     }
 

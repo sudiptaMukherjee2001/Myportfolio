@@ -28,7 +28,7 @@ const SkillCard = ({ skillName, svg }) => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
                 transition={{ duration: 0.7 }}
             >
-                <SkillCards>
+                <SkillCards className="skills__card">
                     <Typography color={"whitesmoke"} fontSize={"1.3rem"} fontWeight={600}>
                         {skillName}
                     </Typography>
